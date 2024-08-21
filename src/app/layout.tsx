@@ -15,6 +15,7 @@ export const metadata: Metadata = {
         "portfolio",
         "software developer",
         "Jason Louie",
+        "software engineer",
     ],
     icons: {
         icon: "/green.ico",

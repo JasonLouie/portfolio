@@ -1,4 +1,5 @@
 import Button from "@/components/Button";
+import Title from "@/components/Title";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -8,7 +9,8 @@ export const metadata: Metadata = {
 
 export default function Resume() {
     return (
-        <div className="flex flex-col items-center justify-center p-4">
+        <div className="flex flex-col items-center justify-center p-4 ">
+            <Title>My Resume</Title>
             <embed
                 src={"/resume.pdf#toolbar=0"}
                 className="max-w-full w-[800px] h-[600px] border border-n-6 border-spacing-2 rounded-lg"

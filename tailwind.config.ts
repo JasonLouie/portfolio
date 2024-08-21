@@ -13,7 +13,7 @@ const config: Config = {
             colors: {
                 color: {
                     1: "#96D198",
-                    2: "#FFC876",
+                    2: "#E0E8E0",
                     3: "#FF776F",
                     4: "#7ADB78",
                     5: "#858DFF",
@@ -42,7 +42,9 @@ const config: Config = {
                 grotesk: "var(--font-grotesk)",
             },
             textShadow: {
-                name: "2px 2px 0 #96D198, 2px -2px 0 #96D198, -2px 2px 0 #96D198, -2px -2px 0 #96D198, 2px 0px 0 #96D198, 0px 2px 0 #96D198, -2px 0px 0 #96D198, 0px -2px 0 #96D198",
+                name1: "1px 1px 0 #96D198, 1px -1px 0 #96D198, -1px 2px 0 #96D198, -1px -1px 0 #96D198, 1px 0px 0 #96D198, 0px 1px 0 #96D198, -1px 0px 0 #96D198, 0px -1px 0 #96D198",
+                name2: "1.5px 1.5px 0 #96D198, 1.5px -1.5px 0 #96D198, -1.5px 1.5px 0 #96D198, -1.5px -1.5px 0 #96D198, 1.5px 0px 0 #96D198, 0px 1.5px 0 #96D198, -1.5px 0px 0 #96D198, 0px -1.5px 0 #96D198",
+                name3: "2px 2px 0 #96D198, 2px -2px 0 #96D198, -2px 2px 0 #96D198, -2px -2px 0 #96D198, 2px 0px 0 #96D198, 0px 2px 0 #96D198, -2px 0px 0 #96D198, 0px -2px 0 #96D198",
             },
         },
     },
@@ -56,7 +58,7 @@ const config: Config = {
                         {},
                 },
                 ".h1": {
-                    "@apply font-semibold text-[2.5rem] leading-[3.25rem] md:text-[3.25rem] md:leading-[4.25rem] lg:text-[4.75rem] lg:leading-[5.5625rem] xl:text-[5.75rem] xl:leading-[6.5rem]":
+                    "@apply font-semibold text-[2.0rem] leading-[3rem] md:text-[3.25rem] md:leading-[4.25rem] lg:text-[4.75rem] lg:leading-[5.5625rem] xl:text-[5.75rem] xl:leading-[6.5rem]":
                         {},
                 },
                 ".h2": {
