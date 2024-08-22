@@ -8,6 +8,75 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
+    const languages = [
+        {
+            id: "0",
+            name: "Python",
+            file: "python.png",
+            style: "relative w-[36px] md:w-[48px] h-[36px] md:h-[48px] m-[2px]",
+        },
+        {
+            id: "1",
+            name: "C++",
+            file: "cplusplus.png",
+            style: "relative w-[36px] md:w-[48px] h-[36px] md:h-[48px] m-[2px]",
+        },
+        {
+            id: "2",
+            name: "C#",
+            file: "csharp.png",
+            style: "relative w-[36px] md:w-[48px] h-[36px] md:h-[48px] m-[2px]",
+        },
+        {
+            id: "3",
+            name: "HTML",
+            file: "html-dark.png",
+            style: "relative w-[36px] md:w-[52px] h-[36px] md:h-[52px] mx-[-3px] translate-y-[1px] md:translate-y-[-2px]",
+        },
+        {
+            id: "4",
+            name: "CSS",
+            file: "css-dark.png",
+            style: "relative w-[38px] md:w-[57px] h-[38px] md:h-[57px] mx-[-1px] md:m-[-4px] md:translate-y-[-1px]",
+        },
+        {
+            id: "5",
+            name: "Javascript",
+            file: "javascript-dark.png",
+            style: "relative w-[38px] md:w-[58px] h-[38px] md:h-[58px] m-[-4px] md:m-[-5px] translate-y-[4px] md:translate-y-0",
+        },
+        {
+            id: "6",
+            name: "Typescript",
+            file: "typescript.png",
+            style: "relative w-[44px] md:w-[60px] h-[44px] md:h-[60px] m-[-2px] md:m-[-4px] translate-y-[2px] md:translate-y-0",
+        },
+        {
+            id: "7",
+            name: "MySQL",
+            file: "mysql.png",
+            style: "relative w-[36px] md:w-[48px] h-[36px] md:h-[48px] m-[2px]",
+        },
+        {
+            id: "8",
+            name: "PHP",
+            file: "php.png",
+            style: "relative w-[39px] md:w-[64px] h-[39px] md:h-[64px] translate-y-[-2px] m-[2px] md:translate-y-[-6.5px]",
+        },
+        {
+            id: "9",
+            name: "Swift",
+            file: "swift.png",
+            style: "relative w-[36px] md:w-[48px] h-[36px] md:h-[48px] m-[2px]",
+        },
+        {
+            id: "10",
+            name: "Java",
+            file: "java.png",
+            style: "relative w-[48px] md:w-[64px] h-[48px] md:h-[64px] translate-y-[-2px] m-[2px] md:translate-y-[-5px]",
+        },
+    ];
+
     return (
         <div className="relative w-full mb-[4rem] md:mb-20 lg:mb:[6.25rem]">
             <div className="w-full flex flex-wrap items-center">
@@ -18,7 +87,7 @@ export default function Home() {
                     <p className="text-base md:text-lg lg:text-xl mb-[1rem] md:mb-[1.5rem] lg:mb-[2rem]">
                         Hi, my name is
                     </p>
-                    <h1 className="h1 mb-6 text-center text-n-8 text-shadow-name1 md:text-shadow-name2 xl:text-shadow-name3">
+                    <h1 className="h1 mb-6 text-center text-n-8 text-shadow-sm md:text-shadow-md xl:text-shadow-name-lg">
                         Jason&nbsp;Louie&nbsp;
                     </h1>
                 </div>
@@ -27,13 +96,27 @@ export default function Home() {
                         src={background}
                         alt="Background"
                         className="image-gradient"
-                    ></Image>
+                    />
                 </div>
             </div>
-            <div className="">
-                <p className="body-1 pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem] text-left px-[1.25rem] sm:px-[1.75rem] md:px-[4rem] lg:px-[6.5rem] xl:px-[8.5rem]">
-                    Tech Stack:
-                </p>
+
+            <div className="body-1 pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem] text-left px-[1.25rem] sm:px-[1.75rem] md:px-[4rem] lg:px-[6.5rem] xl:px-[8.5rem]">
+                Tech Stack:
+                <div className="flex flex-row flex-wrap pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem]">
+                    {languages.map((lang) => (
+                        <div key={lang.id} className={lang.style}>
+                            <Image
+                                src={`/images/languages/${lang.file}`}
+                                alt={`Icon of ${lang.name}`}
+                                fill
+                                style={{ objectFit: "contain" }}
+                                sizes="(max-width: 768px) 50vw, 
+                           (max-width: 1024px) 25vw, 
+                           10vw"
+                            />
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -10,6 +10,11 @@ const config: Config = {
     ],
     theme: {
         extend: {
+            textShadow: {
+                sm: "1px 1px 0 #96D198, 1px -1px 0 #96D198, -1px 2px 0 #96D198, -1px -1px 0 #96D198, 1px 0px 0 #96D198, 0px 1px 0 #96D198, -1px 0px 0 #96D198, 0px -1px 0 #96D198",
+                md: "1.5px 1.5px 0 #96D198, 1.5px -1.5px 0 #96D198, -1.5px 1.5px 0 #96D198, -1.5px -1.5px 0 #96D198, 1.5px 0px 0 #96D198, 0px 1.5px 0 #96D198, -1.5px 0px 0 #96D198, 0px -1.5px 0 #96D198",
+                lg: "2px 2px 0 #96D198, 2px -2px 0 #96D198, -2px 2px 0 #96D198, -2px -2px 0 #96D198, 2px 0px 0 #96D198, 0px 2px 0 #96D198, -2px 0px 0 #96D198, 0px -2px 0 #96D198",
+            },
             colors: {
                 color: {
                     1: "#96D198",
@@ -41,15 +46,24 @@ const config: Config = {
                 code: "var(--font-code)",
                 grotesk: "var(--font-grotesk)",
             },
-            textShadow: {
-                name1: "1px 1px 0 #96D198, 1px -1px 0 #96D198, -1px 2px 0 #96D198, -1px -1px 0 #96D198, 1px 0px 0 #96D198, 0px 1px 0 #96D198, -1px 0px 0 #96D198, 0px -1px 0 #96D198",
-                name2: "1.5px 1.5px 0 #96D198, 1.5px -1.5px 0 #96D198, -1.5px 1.5px 0 #96D198, -1.5px -1.5px 0 #96D198, 1.5px 0px 0 #96D198, 0px 1.5px 0 #96D198, -1.5px 0px 0 #96D198, 0px -1.5px 0 #96D198",
-                name3: "2px 2px 0 #96D198, 2px -2px 0 #96D198, -2px 2px 0 #96D198, -2px -2px 0 #96D198, 2px 0px 0 #96D198, 0px 2px 0 #96D198, -2px 0px 0 #96D198, 0px -2px 0 #96D198",
-            },
         },
     },
     plugins: [
-        require("tailwindcss-textshadow"),
+        plugin(function ({ addUtilities, theme }) {
+            const textShadow = theme("textShadow", {}) as Record<
+                string,
+                string
+            >;
+            const newUtilities = Object.entries(textShadow).map(
+                ([key, value]) => ({
+                    [`.text-shadow-${key}`]: {
+                        textShadow: value,
+                    },
+                })
+            );
+
+            addUtilities(newUtilities);
+        }),
         plugin(function ({ addBase, addComponents, addUtilities }) {
             addBase({});
             addComponents({
@@ -103,7 +117,7 @@ const config: Config = {
                     "@apply relative w-full h-auto": {},
                 },
                 ".input": {
-                    "@apply bg-n-5 w-[25rem] h-[3.125rem] border-none outline-none pl-2 rounded-md focus:ring-2 focus:ring-n-3":
+                    "@apply bg-n-5 w-[18rem] sm:w-[22rem] md:w-[25rem] h-[3.125rem] border-none outline-none pl-2 rounded-md focus:ring-2 focus:ring-n-3":
                         {},
                 },
             });
@@ -133,6 +147,12 @@ const config: Config = {
                                 "0 0 0px 1000px rgba(var(--background)) inset",
                             transition: "background-color 5000s ease-in-out 0s",
                         },
+                },
+                ".no-scrollbar": {
+                    "-ms-overflow-style": "none" /* Internet Explorer 10+ */,
+                },
+                ".no-scrollbar::-webkit-scrollbar": {
+                    display: "none" /* Safari and Chrome */,
                 },
             });
         }),

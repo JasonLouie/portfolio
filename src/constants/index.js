@@ -7,14 +7,14 @@ export const navigation = [
     },
     {
         id: "1",
-        title: "Projects",
-        url: "/projects",
+        title: "Contact",
+        url: "/contact",
         onlyMobile: false,
     },
     {
         id: "2",
-        title: "Contact",
-        url: "/contact",
+        title: "Projects",
+        url: "/projects",
         onlyMobile: false,
     },
     {
@@ -24,6 +24,9 @@ export const navigation = [
         onlyMobile: false,
     },
 ];
+
+export const scriptURL =
+    "https://script.google.com/macros/s/AKfycbxVEajjQFDeZGHlfFWvZ26yoMqPbrh-hXWmeKjF9YLMewtYoTpMpWDKvaPbZwQWwb-3/exec";
 
 export const work = [
     {
@@ -91,57 +94,5 @@ export const experiences = [
                     "Assessed and validated correctness, functionality, and relevancy of code-related outputs from AI models through rigorous testing",
             },
         ],
-    },
-];
-
-export const languages = [
-    {
-        id: "0",
-        title: "Python",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "1",
-        title: "C++",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "2",
-        title: "C#",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "3",
-        title: "HTML",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "4",
-        title: "CSS",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "5",
-        title: "Javascript",
-        icon: "",
-        width: 30,
-        height: 30,
-    },
-    {
-        id: "6",
-        title: "SQL",
-        icon: "",
-        width: 30,
-        height: 30,
     },
 ];

@@ -1,6 +1,5 @@
 "use client";
 import Link from "next/link";
-import { disablePageScroll, enablePageScroll } from "scroll-lock";
 import { useState } from "react";
 import { navigation } from "../constants";
 import { usePathname } from "next/navigation";
@@ -15,17 +14,17 @@ export default function Header() {
     const toggleNavigation = () => {
         if (openNavigation) {
             setOpenNavigation(false);
-            enablePageScroll();
+            document.body.style.overflow = ""; // Re-enable scrolling
         } else {
             setOpenNavigation(true);
-            disablePageScroll();
+            document.body.style.overflow = "hidden"; // Disable scrolling
         }
     };
 
     const handleClick = () => {
         if (!openNavigation) return;
 
-        enablePageScroll();
+        document.body.style.overflow = ""; // Re-enable scrolling
         setOpenNavigation(false);
     };
 
@@ -46,6 +45,7 @@ export default function Header() {
                             src="/green.png"
                             width={40}
                             height={40}
+                            className="rounded-xl"
                             alt="Logo"
                         />
                     </Link>

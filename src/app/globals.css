@@ -17,21 +17,8 @@
   scroll-behavior: smooth
 }
 
-html {
-  overflow-x: hidden;
-}
-
-::-webkit-scrollbar {
-  width: 0;
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: red;
-}
-
 @layer base {
   body {
-    @apply font-sans bg-n-8 text-n-1 text-base;
+    @apply font-sans bg-n-8 text-n-1 text-base no-scrollbar w-full;
   }
 }

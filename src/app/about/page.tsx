@@ -16,23 +16,44 @@ export default function About() {
                     {bio}
                 </p>
                 <Title>Work Experience</Title>
-                {experiences.map((item) => {
-                    return (
-                        <div key={item.id}>
-                            {item.company + ` | ` + item.position}
-                            {item.responsibilities.map((responsibility) => {
-                                return (
-                                    <p
-                                        key={responsibility.id}
-                                        className="body-2 pt-[0.5rem] md:pt-[0.75rem] lg:pt-[1rem] xl:pt-[1.5rem] text-left mb-[2rem]"
-                                    >
-                                        {responsibility.description}
-                                    </p>
-                                );
-                            })}
-                        </div>
-                    );
-                })}
+                <div className="">
+                    {experiences.map((item) => {
+                        return (
+                            <ul
+                                key={item.id}
+                                className="list-disc list-outside"
+                            >
+                                <p className="">
+                                    <span className="h6">{item.company}</span>
+                                    <span className="text-n-4 text-xl">
+                                        {" "}
+                                        |{" "}
+                                    </span>
+                                    <span className="italic">
+                                        {item.position}
+                                    </span>
+                                    <span className="text-n-4 text-xl">
+                                        {" "}
+                                        |{" "}
+                                    </span>
+                                    <span className="text-sm text-gray-300">
+                                        {`(` + item.date + `)`}
+                                    </span>
+                                </p>
+                                {item.responsibilities.map((responsibility) => {
+                                    return (
+                                        <li
+                                            key={responsibility.id}
+                                            className="ml-[2.5rem] body-2 list pt-[0.5rem] md:pt-[0.75rem] lg:pt-[1rem] xl:pt-[1.5rem] text-n-1"
+                                        >
+                                            {responsibility.description}
+                                        </li>
+                                    );
+                                })}
+                            </ul>
+                        );
+                    })}
+                </div>
             </div>
         </div>
     );

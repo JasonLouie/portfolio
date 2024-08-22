@@ -4,13 +4,11 @@ import Button from "./Button";
 import Title from "./Title";
 import { useState } from "react";
 import Modal from "./Modal";
+import { scriptURL } from "@/constants";
 
 export default function ContactForm() {
     const [submitState, disableSubmit] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
-
-    const scriptURL =
-        "https://script.google.com/macros/s/AKfycbxVEajjQFDeZGHlfFWvZ26yoMqPbrh-hXWmeKjF9YLMewtYoTpMpWDKvaPbZwQWwb-3/exec";
 
     const validate = (formData: FormData) => {
         let keyValuePairs = [];
@@ -84,7 +82,7 @@ export default function ContactForm() {
                 <textarea
                     id="message"
                     name="message"
-                    className="bg-n-5 py-[.875rem] w-[25rem] h-[8.75rem] border-none outline-none pl-[1.5rem] rounded-[1.25rem] focus:ring-2 focus:ring-n-3"
+                    className="input h-[6rem] sm:h-[7.5rem] md:h-[8.75rem]"
                     required
                 />
                 <Button
