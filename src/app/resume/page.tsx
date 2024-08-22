@@ -14,14 +14,14 @@ export default function Resume() {
             <object
                 data={"/files/resume.pdf#toolbar=0"}
                 type="application/pdf"
-                className="max-w-full w-[400px] h-[300px] md:w-[800px] md:h-[600px] border border-n-6 border-spacing-2 rounded-lg"
+                className="overflow-hidden max-w-full w-[400px] h-[300px] md:w-[800px] md:h-[600px] border-[1px] sm:border-[2px] md:border-[3px] lg:border-[4px] border-n-6 rounded-lg m-[1px]"
             >
-                <div className="blur bg-n-1 h-full">
-                    <p className="fixed p-4 z-10 text-black bg-n-3 h-auto">
-                        Your web browser doesn't have a PDF plugin. Download the
-                        PDF of my resume by clicking the button below.
-                    </p>
-                </div>
+                <embed
+                    className=""
+                    src="https://drive.google.com/file/d/1fJ4HhiLyk5TeYP8mOwxK1VFoRozL7wm6/preview?usp=sharing"
+                    width="100%"
+                    height="100%"
+                />
             </object>
             <Button
                 href={"/files/resume.pdf"}

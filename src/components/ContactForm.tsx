@@ -41,6 +41,8 @@ export default function ContactForm() {
         const formData = new FormData(e.currentTarget);
         if (validate(formData)) {
             sendData(formData);
+        } else {
+            // Display errors
         }
         disableSubmit(false);
     }
@@ -82,7 +84,7 @@ export default function ContactForm() {
                 <textarea
                     id="message"
                     name="message"
-                    className="input h-[6rem] sm:h-[7.5rem] md:h-[8.75rem]"
+                    className="input h-[6rem] sm:h-[7.5rem] md:h-[8.75rem] py-2 md:py-3"
                     required
                 />
                 <Button

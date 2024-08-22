@@ -31,25 +31,25 @@ export default function Home() {
             id: "3",
             name: "HTML",
             file: "html-dark.png",
-            style: "relative w-[36px] md:w-[52px] h-[36px] md:h-[52px] mx-[-3px] translate-y-[1px] md:translate-y-[-2px]",
+            style: "relative w-[36px] md:w-[52px] h-[36px] md:h-[52px] mx-[-3px]",
         },
         {
             id: "4",
             name: "CSS",
             file: "css-dark.png",
-            style: "relative w-[38px] md:w-[57px] h-[38px] md:h-[57px] mx-[-1px] md:m-[-4px] md:translate-y-[-1px]",
+            style: "relative w-[38px] md:w-[57px] h-[38px] md:h-[57px] mx-[-1px] md:m-[-4px]",
         },
         {
             id: "5",
             name: "Javascript",
             file: "javascript-dark.png",
-            style: "relative w-[38px] md:w-[58px] h-[38px] md:h-[58px] m-[-4px] md:m-[-5px] translate-y-[4px] md:translate-y-0",
+            style: "relative w-[38px] md:w-[58px] h-[38px] md:h-[58px] m-[-4px] md:m-[-5px]",
         },
         {
             id: "6",
             name: "Typescript",
             file: "typescript.png",
-            style: "relative w-[44px] md:w-[60px] h-[44px] md:h-[60px] m-[-2px] md:m-[-4px] translate-y-[2px] md:translate-y-0",
+            style: "relative w-[44px] md:w-[60px] h-[44px] md:h-[60px] m-[-2px] md:m-[-4px]",
         },
         {
             id: "7",
@@ -61,7 +61,7 @@ export default function Home() {
             id: "8",
             name: "PHP",
             file: "php.png",
-            style: "relative w-[39px] md:w-[64px] h-[39px] md:h-[64px] translate-y-[-2px] m-[2px] md:translate-y-[-6.5px]",
+            style: "relative w-[39px] md:w-[64px] h-[39px] md:h-[64px] m-[2px]",
         },
         {
             id: "9",
@@ -73,7 +73,7 @@ export default function Home() {
             id: "10",
             name: "Java",
             file: "java.png",
-            style: "relative w-[48px] md:w-[64px] h-[48px] md:h-[64px] translate-y-[-2px] m-[2px] md:translate-y-[-5px]",
+            style: "relative w-[48px] md:w-[64px] h-[48px] md:h-[64px]",
         },
     ];
 
@@ -102,7 +102,7 @@ export default function Home() {
 
             <div className="body-1 pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem] text-left px-[1.25rem] sm:px-[1.75rem] md:px-[4rem] lg:px-[6.5rem] xl:px-[8.5rem]">
                 Tech Stack:
-                <div className="flex flex-row flex-wrap pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem]">
+                <div className="flex flex-row flex-wrap items-center pt-[1rem] md:pt-[1.5rem] lg:pt-[2rem] xl:pt-[2.5rem]">
                     {languages.map((lang) => (
                         <div key={lang.id} className={lang.style}>
                             <Image

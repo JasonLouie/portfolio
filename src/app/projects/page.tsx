@@ -2,6 +2,7 @@ import { work } from "../../constants";
 
 import { Metadata } from "next";
 import Title from "@/components/Title";
+import Link from "next/link";
 
 export const metadata: Metadata = {
     title: "Projects",
@@ -13,17 +14,18 @@ export default function Projects() {
         <div className="grid grid-cols-1 gap-1 p-[4rem] md:grid-cols-2">
             {work.map((item) => {
                 return (
-                    <div
+                    <Link
                         key={item.id}
-                        className="p-6 bg-n-7 border-4 rounded-lg box-gradient"
+                        href={item.url}
+                        className="p-6 bg-n-7 border-4 rounded-lg box-gradient min-w-[240px]"
                     >
-                        <Title>{item.title}</Title>
+                        <Title dangerouslySetInnerHTML={item.title}></Title>
                         <p className="body-1 mb-[1rem]">{item.description}</p>
                         <p className="text-n-1 mb-[0.75rem]">
                             Languages: {item.languages}
                         </p>
                         <p>{item.date}</p>
-                    </div>
+                    </Link>
                 );
             })}
         </div>

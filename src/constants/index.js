@@ -31,30 +31,30 @@ export const scriptURL =
 export const work = [
     {
         id: "0",
-        title: "Unscramble! iOS Game",
+        title: "Unscramble! iOS&nbsp;Game",
         languages: "Swift",
         description:
             "An iOS game that prompts users to find as many words possible from a randomized string of characters. After users find all the words they can, they can view the definitions, parts of speech, and sentence examples of words that they found or missed.",
         date: "Mar. 2022 to May 2022",
-        imageUrl: "",
+        url: "/projects/unscramble-game",
     },
     {
         id: "1",
-        title: "Python Chat Application",
+        title: "Python&nbsp;Chat Application",
         languages: "Python",
         description:
             "An application that allows two users to communicate through voice, video, and text chat. Text chat is compatible for more than two users.",
         date: "Jun. 2022 to Aug. 2022",
-        imageUrl: "",
+        url: "/projects/python-chat-app",
     },
     {
         id: "2",
         title: "TVShows API",
         languages: "C#, MySQL",
         description:
-            "A REST API created in C# allowing users to leave a review on American TV Shows and view ratings from IMDB, Rotten Tomatoes, and from other users.",
+            "A REST API allowing users to leave a review on American TV Shows and view ratings from IMDB, Rotten Tomatoes, and from other users.",
         date: "Dec. 2022 to Jan. 2023",
-        imageUrl: "",
+        url: "/projects/tvshows-api",
     },
     {
         id: "3",
@@ -63,7 +63,7 @@ export const work = [
         description:
             "A web app that allows users to partake in one-on-one conversations between authenticated users. The app dynamically updates based on user interactions, such as searching for users, adding new users, or engaging in chats.",
         date: "Sept. 2023 to Oct. 2023",
-        imageUrl: "",
+        url: "/projects/web-chat-app",
     },
 ];
 

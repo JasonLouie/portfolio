@@ -68,7 +68,7 @@ const config: Config = {
             addBase({});
             addComponents({
                 ".container": {
-                    "@apply max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem]":
+                    "@apply px-[1.25rem] sm:px-[1.75rem] md:px-[4rem] lg:px-[6.5rem] xl:px-[8.5rem]":
                         {},
                 },
                 ".h1": {
