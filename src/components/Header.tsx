@@ -43,7 +43,7 @@ export default function Header() {
                         onClick={handleClick}
                     >
                         <Image
-                            src="/green.png"
+                            src="./green.png"
                             width={40}
                             height={40}
                             className="rounded-xl"

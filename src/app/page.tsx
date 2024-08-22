@@ -106,7 +106,7 @@ export default function Home() {
                     {languages.map((lang) => (
                         <div key={lang.id} className={lang.style}>
                             <Image
-                                src={`/images/languages/${lang.file}`}
+                                src={`./images/languages/${lang.file}`}
                                 alt={`Icon of ${lang.name}`}
                                 fill
                                 style={{ objectFit: "contain" }}
