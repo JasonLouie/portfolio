@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 import MobileMenu from "./MobileMenu";
 import MenuSvg from "../assets/svg/MenuSvg";
 import Button from "./Button";
+import Image from "next/image";
 
 export default function Header() {
     const [openNavigation, setOpenNavigation] = useState(false);
@@ -41,7 +42,7 @@ export default function Header() {
                         href="/"
                         onClick={handleClick}
                     >
-                        <img
+                        <Image
                             src="/green.png"
                             width={40}
                             height={40}
