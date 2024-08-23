@@ -18,9 +18,9 @@ export const metadata: Metadata = {
         "software engineer",
     ],
     icons: {
-        icon: "/green.ico",
-        shortcut: "/green.ico",
-        apple: "/green.png",
+        icon: "./green.ico",
+        shortcut: "./green.ico",
+        apple: "./green.png",
     },
 };
 
