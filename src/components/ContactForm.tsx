@@ -1,21 +1,68 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 import Title from "./Title";
-import { useState } from "react";
 import Modal from "./Modal";
 import { scriptURL } from "@/constants";
 
 export default function ContactForm() {
+    const initialValues = { name: "", email: "", message: "" };
+    const formIds: string[] = [];
+
     const [submitState, disableSubmit] = useState(false);
     const [isModalOpen, setModalOpen] = useState(false);
+    const [formValues, setFormValues] = useState(initialValues);
+    const [formErrors, setFormErrors] = useState(initialValues);
 
-    const validate = (formData: FormData) => {
-        let keyValuePairs = [];
-        for (const [key, value] of Array.from(formData.entries())) {
-            keyValuePairs.push(key + "=" + value);
+    const handleInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { name, value } = e.target;
+        setFormValues((prevFormValues) => ({
+            ...prevFormValues,
+            [name]: value,
+        }));
+    };
+
+    const handleMessage = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+        const { name, value } = e.target;
+        setFormValues((prevFormValues) => ({
+            ...prevFormValues,
+            [name]: value,
+        }));
+    };
+
+    const validate = (values: {
+        name: string;
+        email: string;
+        message: string;
+    }) => {
+        let errors = { name: "", email: "", message: "" };
+        const regex =
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!values.name) {
+            errors.name = "Name is required!";
+            formIds.push("nameError");
+        } else {
+            document.getElementById("nameError")?.classList.add("hidden");
         }
-        return true;
+        if (!values.email) {
+            errors.email = "Email is required!";
+            formIds.push("emailError");
+        } else if (!String(values.email).toLowerCase().match(regex)) {
+            errors.email = "Invalid email format!";
+            formIds.push("emailError");
+        } else {
+            document.getElementById("emailError")?.classList.add("hidden");
+        }
+        if (!values.message) {
+            errors.message = "Message is required!";
+            formIds.push("messageError");
+        } else if (values.message.length < 10) {
+            errors.message = "Message must be at least 10 characters!";
+            formIds.push("messageError");
+        } else {
+            document.getElementById("messageError")?.classList.add("hidden");
+        }
+        return errors;
     };
 
     const sendData = (formData: FormData) => {
@@ -37,14 +84,20 @@ export default function ContactForm() {
 
     async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
         e.preventDefault();
-        disableSubmit(true);
-        const formData = new FormData(e.currentTarget);
-        if (validate(formData)) {
-            sendData(formData);
+        setFormErrors(validate(formValues));
+        if (formIds.length === 0) {
+            // console.log("Before submit toggle: ", submitState);
+            disableSubmit(true);
+            // console.log("After submit toggle: ", submitState);
+            sendData(new FormData(e.currentTarget));
+            disableSubmit(false);
+            // console.log("After submit toggle2: ", submitState);
         } else {
             // Display errors
+            formIds.map((id: string) =>
+                document.getElementById(id)?.classList.remove("hidden")
+            );
         }
-        disableSubmit(false);
     }
 
     return (
@@ -54,6 +107,7 @@ export default function ContactForm() {
                 className="flex flex-col items-start gap-5"
                 name="contact-form"
                 onSubmit={handleSubmit}
+                noValidate
             >
                 <Title>Get in Touch</Title>
                 <label htmlFor="name" className="text-n-2">
@@ -66,7 +120,12 @@ export default function ContactForm() {
                     name="name"
                     className="input autofill"
                     required
+                    onChange={handleInput}
+                    value={formValues.name}
                 />
+                <p id="nameError" className="error hidden">
+                    {formErrors.name}
+                </p>
                 <label htmlFor="email" className="text-n-2">
                     Email address
                 </label>
@@ -76,8 +135,12 @@ export default function ContactForm() {
                     autoComplete="email"
                     name="email"
                     className="input autofill"
-                    required
+                    onChange={handleInput}
+                    value={formValues.email}
                 />
+                <p id="emailError" className="error hidden">
+                    {formErrors.email}
+                </p>
                 <label htmlFor="message" className="text-n-2">
                     Message
                 </label>
@@ -85,8 +148,12 @@ export default function ContactForm() {
                     id="message"
                     name="message"
                     className="input h-[6rem] sm:h-[7.5rem] md:h-[8.75rem] py-2 md:py-3"
-                    required
+                    onChange={handleMessage}
+                    value={formValues.message}
                 />
+                <p id="messageError" className="error hidden">
+                    {formErrors.message}
+                </p>
                 <Button
                     id="submit"
                     buttonType="submit"
