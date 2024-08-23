@@ -19,9 +19,9 @@ const config: Config = {
                 color: {
                     1: "#96D198",
                     2: "#E0E8E0",
-                    3: "#FF776F",
-                    4: "#7ADB78",
-                    5: "#858DFF",
+                    3: "#FFBABA",
+                    4: "#FF776F",
+                    5: "#C51244",
                     6: "#FF98E2",
                     7: "none",
                 },
@@ -118,6 +118,10 @@ const config: Config = {
                 },
                 ".input": {
                     "@apply bg-n-5 w-[18rem] sm:w-[22rem] md:w-[25rem] h-[3.125rem] border-none outline-none pl-2 rounded-md focus:ring-2 focus:ring-n-3":
+                        {},
+                },
+                ".error": {
+                    "@apply inline-block flex items-center text-left text-color-5 bg-color-3 h-[3rem] border-[2px] border-color-4 outline-none pl-2 pr-6 text-[14px]":
                         {},
                 },
             });
