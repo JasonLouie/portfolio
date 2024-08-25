@@ -43,7 +43,7 @@ export const work = [
         title: "Python&nbsp;Chat Application",
         languages: "Python",
         description:
-            "An application that allows two users to communicate through voice, video, and text chat. Text chat is compatible for more than two users.",
+            "A chat application that allows two users to communicate through voice, video, and text chat. Text chat is compatible for more than two users.",
         date: "Jun. 2022 to Aug. 2022",
         url: "/projects/python-chat-app",
     },
@@ -96,3 +96,30 @@ export const experiences = [
         ],
     },
 ];
+
+export const PythonChatAppInfo = {
+    name: "Python Chat Application",
+    repo: "",
+    content: [
+        {
+            id: "0",
+            title: "Overview",
+            text: "",
+        },
+        {
+            id: "1",
+            title: "Functionality",
+            text: "",
+        },
+        {
+            id: "2",
+            title: "How It Works",
+            text: "",
+        },
+        {
+            id: "3",
+            title: "Modules",
+            text: "",
+        },
+    ],
+};

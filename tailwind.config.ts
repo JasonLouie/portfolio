@@ -67,12 +67,8 @@ const config: Config = {
         plugin(function ({ addBase, addComponents, addUtilities }) {
             addBase({});
             addComponents({
-                ".container": {
-                    "@apply px-[1.25rem] sm:px-[1.75rem] md:px-[4rem] lg:px-[6.5rem] xl:px-[8.5rem]":
-                        {},
-                },
                 ".h1": {
-                    "@apply font-semibold text-[2.0rem] leading-[3rem] md:text-[3.25rem] md:leading-[4.25rem] lg:text-[4.75rem] lg:leading-[5.5625rem] xl:text-[5.75rem] xl:leading-[6.5rem]":
+                    "@apply font-semibold text-[2.0rem] leading-[3rem] sm:text-[2.7rem] sm:leading-[3.5rem] md:text-[3.25rem] md:leading-[4.25rem] lg:text-[4.75rem] lg:leading-[5.5625rem] xl:text-[5.75rem] xl:leading-[6.5rem]":
                         {},
                 },
                 ".h2": {
@@ -100,7 +96,7 @@ const config: Config = {
                         {},
                 },
                 ".caption": {
-                    "@apply text-sm": {},
+                    "@apply text-xs md:text-sm": {},
                 },
                 ".tagline": {
                     "@apply font-grotesk font-light text-xs tracking-tagline uppercase":
