@@ -25,6 +25,9 @@
 *.pem
 *.local
 
+# local AI context (auto-loaded by Claude Code, not shared)
+CLAUDE.local.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
