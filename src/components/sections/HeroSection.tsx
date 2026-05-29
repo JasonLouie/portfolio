@@ -1,8 +1,11 @@
 import Image from "next/image";
 import me from "@/src/assets/me.png";
+import { bio } from "../../constants";
 import Section from "../Section";
 import Button from "../Button";
 import TerminalIntro from "../TerminalIntro";
+
+const focusTags = ["full-stack", "MERN", "TypeScript", "REST APIs"];
 
 export default function HeroSection() {
     return (
@@ -14,7 +17,7 @@ export default function HeroSection() {
             <div aria-hidden className="pointer-events-none absolute inset-0 hero-grid" />
             <div aria-hidden className="pointer-events-none absolute inset-0 hero-glow" />
 
-            <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-10 lg:grid-cols-[1.25fr_0.75fr]">
+            <div className="relative z-10 mx-auto grid w-full max-w-5xl items-center gap-10 lg:grid-cols-2">
                 {/* Terminal + actions */}
                 <div className="order-last lg:order-first">
                     <TerminalIntro />
@@ -40,22 +43,58 @@ export default function HeroSection() {
                     </div>
                 </div>
 
-                {/* Photo + status */}
-                <div className="order-first mx-auto lg:order-last">
+                {/* Photo + identity */}
+                <div className="order-first flex flex-col items-center gap-6 text-center lg:order-last lg:items-start lg:text-left">
                     <div className="relative w-fit">
                         <Image
                             src={me}
                             alt="Jason Louie"
                             priority
-                            className="h-44 w-44 rounded-xl object-cover ring-1 ring-accent/40 md:h-60 md:w-60"
+                            className="h-44 w-44 rounded-xl object-cover ring-1 ring-accent/40 md:h-56 md:w-56"
                         />
                         <span className="absolute -bottom-3 left-1/2 flex -translate-x-1/2 items-center gap-2 whitespace-nowrap rounded-full border border-fg/10 bg-surface px-3 py-1 font-mono text-xs text-muted">
                             <span className="h-2 w-2 rounded-full bg-accent shadow-[0_0_8px] shadow-accent" />
                             available for work
                         </span>
                     </div>
+
+                    <p className="font-mono text-sm text-fg">
+                        <span className="text-accent">›&nbsp;</span>open to software engineering roles
+                    </p>
+
+                    <p className="max-w-md text-sm leading-relaxed text-muted">{bio}</p>
+
+                    <div className="flex flex-wrap justify-center gap-2 lg:justify-start">
+                        {focusTags.map((tag) => (
+                            <span
+                                key={tag}
+                                className="rounded-md border border-accent/30 bg-accent/5 px-2.5 py-1 font-mono text-xs text-accent"
+                            >
+                                {tag}
+                            </span>
+                        ))}
+                    </div>
                 </div>
             </div>
+
+            {/* Scroll cue (desktop only — avoids overlap on tall mobile stacks) */}
+            <a
+                href="#skills"
+                aria-label="Scroll to skills"
+                className="absolute bottom-6 left-1/2 hidden -translate-x-1/2 text-muted transition-colors hover:text-accent lg:block"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth={2}
+                    className="h-6 w-6 animate-bounce motion-reduce:animate-none"
+                    aria-hidden="true"
+                >
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+            </a>
         </Section>
     );
 }
