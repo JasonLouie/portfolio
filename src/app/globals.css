@@ -1,16 +1,19 @@
 @import "tailwindcss";
 
-:root {
-    --background: #ffffff;
-    --foreground: #171717;
-}
-
 @theme {
-    --color-background: var(--background);
-    --color-foreground: var(--foreground);
+    /* Terminal / developer-dark palette */
+    --color-bg: #0d0f0d;
+    --color-surface: #16191a;
+    --color-fg: #e6e8e6;
+    --color-muted: #8b938b;
+    --color-accent: #22c55e;
+    --color-accent-hover: #4ade80;
+
+    /* Fonts: JetBrains Mono (headings/nav/labels) + Sora (body) */
     --font-sans: var(--font-sora), sans-serif;
-    --font-space: var(--font-space), sans-serif;
-    --text-nav: clamp(1rem, 1.75vw + 0.5rem, 2rem);
+    --font-mono: var(--font-jetbrains), monospace;
+
+    --text-nav: clamp(0.8rem, 0.4vw + 0.7rem, 0.95rem);
     --text-title: clamp(0.35rem, 1.5vw + 0.35rem, 1.5rem);
     --spacing-page-x: clamp(0.5rem, 5vw, 8rem);
     --spacing-page-y: clamp(0.25rem, 5vh, 2rem);
@@ -18,10 +21,10 @@
 
 @layer utilities {
     .nav-active {
-        @apply relative text-white;
+        @apply relative text-accent;
     }
-    .nav-active::before {
-        @apply content-[''] absolute bottom-1 m-auto bg-green-700 rounded-xs h-1 w-[calc(100%-2rem)];
+    .nav-active::after {
+        @apply content-[''] absolute left-3 right-3 -bottom-0.5 h-0.5 bg-accent rounded-xs;
     }
 
     .hamburger-menu {
@@ -29,7 +32,7 @@
     }
     .hamburger-menu::before,
     .hamburger-menu::after {
-        @apply transition-all duration-300 content-[''] absolute w-[70%] h-1 bg-white inset-x-0 mx-auto rounded-md;
+        @apply transition-all duration-300 content-[''] absolute w-[70%] h-1 bg-fg inset-x-0 mx-auto rounded-md;
     }
     .hamburger-menu::before {
         @apply top-3;
@@ -45,11 +48,8 @@
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --background: #0a0a0a;
-        --foreground: #ededed;
-    }
+:root {
+    color-scheme: dark;
 }
 
 * {
@@ -57,7 +57,7 @@
 }
 
 body {
-    background: var(--background);
-    color: var(--foreground);
-    font-size: clamp(0.25rem, 1.25vw + 0.25rem, 1.1rem);
+    background: var(--color-bg);
+    color: var(--color-fg);
+    font-size: clamp(0.85rem, 1.25vw + 0.25rem, 1.05rem);
 }
