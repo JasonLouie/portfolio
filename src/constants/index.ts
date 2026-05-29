@@ -81,7 +81,7 @@ export const projects = [
         name: "MangaDB", href: "/projects/mangadb", description: "A", stack: ["MongoDB", "Express", "React", "Node.js"], src: missing
     },
     {
-        name: "AniWho", href: "/projects/aniwho", description: "A", stack: ["MongoDB", "Express", "React", "Node.js"], src: missing
+        name: "AniGuesser", href: "/projects/aniguesser", description: "A", stack: ["MongoDB", "Express", "React", "Node.js"], src: missing
     },
     {
         name: "Wordle Clone", href: "/projects/wordle-clone", description: "An", stack: ["MongoDB", "Express", "React", "Node.js"], src: missing
