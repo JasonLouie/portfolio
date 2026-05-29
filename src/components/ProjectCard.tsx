@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from "next/image";
 import Button from "./Button";
+import missing from "@/src/assets/missing.png";
 
 interface ProjectProps {
     name: string,
@@ -10,14 +11,20 @@ interface ProjectProps {
 }
 
 export default function ProjectCard({ name, href, stack, src }: ProjectProps) {
+    const isPlaceholder = src === missing;
+
     return (
         <div className="group flex flex-col overflow-hidden rounded-lg border border-fg/10 bg-surface transition-colors hover:border-accent/40">
             <Button href={href} className="block w-full overflow-hidden bg-bg">
                 <div className="relative aspect-video w-full">
                     <Image
                         src={src}
-                        alt={`${name} preview`}
-                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        alt={isPlaceholder ? `${name} — no preview yet` : `${name} preview`}
+                        className={
+                            isPlaceholder
+                                ? "h-full w-full object-contain p-12 opacity-25"
+                                : "h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        }
                         loading="eager"
                     />
                 </div>

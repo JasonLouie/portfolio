@@ -11,7 +11,7 @@ export default function Section({
     className,
     children
 } : SectionProps) {
-    const classes = `px-8 py-10 ${className ? className : ""}`;
+    const classes = `px-6 py-16 md:px-8 md:py-24 ${className ? className : ""}`;
 
     return (
         <section id={id} className={classes}>
