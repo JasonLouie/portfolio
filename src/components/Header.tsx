@@ -49,7 +49,7 @@ export default function Header() {
                         className="h-10 w-10 rounded-lg object-cover ring-1 ring-accent/60 transition group-hover:ring-accent"
                     />
                     <span className="font-mono text-sm text-fg sm:text-base">
-                        jason<span className="text-accent">.</span>louie
+                        JasonLouie
                     </span>
                 </Link>
 

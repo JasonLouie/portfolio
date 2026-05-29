@@ -61,3 +61,33 @@ body {
     color: var(--color-fg);
     font-size: clamp(0.85rem, 1.25vw + 0.25rem, 1.05rem);
 }
+
+/* Terminal cursor */
+@keyframes blink {
+    0%, 49% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+.cursor-blink {
+    animation: blink 1s steps(1, end) infinite;
+}
+
+/* Hero atmosphere: faint green grid + soft glow */
+.hero-grid {
+    background-image:
+        linear-gradient(to right, rgba(34, 197, 94, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(34, 197, 94, 0.06) 1px, transparent 1px);
+    background-size: 44px 44px;
+    -webkit-mask-image: radial-gradient(ellipse at 50% 35%, #000 25%, transparent 75%);
+    mask-image: radial-gradient(ellipse at 50% 35%, #000 25%, transparent 75%);
+}
+
+.hero-glow {
+    background: radial-gradient(55% 45% at 50% 30%, rgba(34, 197, 94, 0.12), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .cursor-blink {
+        animation: none;
+    }
+}
