@@ -1,10 +1,10 @@
 import missing from "@/src/assets/missing.png";
 import { StaticImageData } from "next/image";
-import { SiFramework, SiPython, SiJavascript, SiTypescript, SiDotnet, SiCplusplus, SiMysql, SiHtml5, SiCss3, SiMongoose, SiPassport, SiNextdotjs, SiReact, SiAngular, SiRedux, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman, SiVercel, SiRender, SiNetlify, SiPytest, SiTestinglibrary, SiJunit5, SiJest } from "react-icons/si";
+import { SiFramework, SiClaude, SiAnthropic, SiGooglegemini, SiPython, SiJavascript, SiTypescript, SiDotnet, SiCplusplus, SiMysql, SiHtml5, SiCss3, SiMongoose, SiPassport, SiNextdotjs, SiReact, SiAngular, SiRedux, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman, SiVercel, SiRender, SiNetlify, SiPytest, SiTestinglibrary, SiJunit5, SiJest } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaJava, FaLaptopCode } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
-import { LuFlaskConical, LuWrench } from "react-icons/lu";
+import { LuFlaskConical, LuWrench, LuSparkles, LuBrainCircuit } from "react-icons/lu";
 import { VscVscode } from "react-icons/vsc";
 
 export const navLinks = [
@@ -72,6 +72,16 @@ export const skills = [
             { name: "JUnit", icon: SiJunit5, color: "text-green-500" }
         ],
         logo: { icon: LuFlaskConical, color: "text-white" }
+    },
+    {
+        name: "AI Tools",
+        details: [
+            { name: "Claude Code", icon: SiClaude, color: "text-orange-400" },
+            { name: "Gemini", icon: SiGooglegemini, color: "text-blue-400" },
+            { name: "Claude API", icon: SiAnthropic, color: "text-orange-500" },
+            { name: "Prompt Engineering", icon: LuBrainCircuit, color: "text-purple-400" }
+        ],
+        logo: { icon: LuSparkles, color: "text-white" }
     }
 ];
 
@@ -97,7 +107,7 @@ export const projects: Project[] = [
     {
         slug: "ai-humanizer",
         name: "AI Humanizer App",
-        description: "A multi-stage AI-text humanizer built during my internship: a detector-aware refinement pipeline that rewrites AI-assisted drafts to read naturally, with authentication and usage-based billing.",
+        description: "An AI-text humanizer built during my internship — a multi-stage, prompt-engineered LLM pipeline that rewrites AI-assisted drafts to read naturally and evade detectors, with authentication and usage-based billing.",
         stack: ["Next.js", "TypeScript", "Express", "MongoDB", "Clerk", "Tailwind CSS"],
         src: missing,
         demo: "https://text-humanizer-client.vercel.app/"
