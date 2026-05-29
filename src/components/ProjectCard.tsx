@@ -7,25 +7,35 @@ interface ProjectProps {
     description: string,
     stack: string[],
     src: StaticImageData
-};
+}
 
-export default function ProjectCard({
-    name,
-    href,
-    description,
-    stack,
-    src
-} : ProjectProps) {
+export default function ProjectCard({ name, href, stack, src }: ProjectProps) {
     return (
-        <div
-            className="flex flex-col bg-gray-800 m-auto max-w-full w-120 min-h-90 md:w-160 md:min-h-120 mt-14 last:mb-14"
-        >
-            <Button className="flex justify-center w-full h-67.5 mb-2 md:h-90 md:mb-4 bg-green-900" href={href}>
-                <Image src={src} alt={`Photo of ${name}`} className="h-full w-auto" loading="eager" />
+        <div className="group flex flex-col overflow-hidden rounded-lg border border-fg/10 bg-surface transition-colors hover:border-accent/40">
+            <Button href={href} className="block w-full overflow-hidden bg-bg">
+                <div className="relative aspect-video w-full">
+                    <Image
+                        src={src}
+                        alt={`${name} preview`}
+                        className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                        loading="eager"
+                    />
+                </div>
             </Button>
-            <h2 className="text-center font-bold text-xl mb-3">{name}</h2>
-            <div className="flex flex-row justify-center flex-wrap mb-4 gap-2 md:gap-x-4">
-                {stack.map((s, i) => <p key={`${name}-${s}-${i}`} className="bg-gray-700 py-1 px-2 font-bold text-[0.75rem] rounded-xl">{s}</p>)}
+            <div className="flex flex-1 flex-col p-4">
+                <h3 className="mb-3 font-mono text-base font-semibold text-fg">
+                    <span className="text-accent">›&nbsp;</span>{name}
+                </h3>
+                <div className="mt-auto flex flex-wrap gap-2">
+                    {stack.map((s, i) => (
+                        <span
+                            key={`${name}-${s}-${i}`}
+                            className="rounded-md border border-fg/10 bg-fg/5 px-2 py-0.5 font-mono text-[0.7rem] text-muted"
+                        >
+                            {s}
+                        </span>
+                    ))}
+                </div>
             </div>
         </div>
     );

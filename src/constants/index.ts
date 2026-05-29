@@ -1,5 +1,5 @@
 import missing from "@/src/assets/missing.png";
-import { SiFramework, SiPython, SiJavascript, SiTypescript, SiDotnet, SiCplusplus, SiMysql, SiHtml5, SiCss3, SiSwift, SiMongoose, SiDjango, SiPassport, SiNextdotjs, SiReact, SiRedux, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman, SiVercel, SiRender, SiNetlify, SiPytest, SiTestinglibrary, SiJunit5, SiJest } from "react-icons/si";
+import { SiFramework, SiPython, SiJavascript, SiTypescript, SiDotnet, SiCplusplus, SiMysql, SiHtml5, SiCss3, SiMongoose, SiPassport, SiNextdotjs, SiReact, SiRedux, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman, SiVercel, SiRender, SiNetlify, SiPytest, SiTestinglibrary, SiJunit5, SiJest } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
 import { FaJava, FaLaptopCode } from "react-icons/fa";
 import { GiBearFace } from "react-icons/gi";
@@ -26,8 +26,7 @@ export const skills = [
             { name: "C++", icon: SiCplusplus, color: "text-blue-600" },
             { name: "Java", icon: FaJava, color: "text-red-500" },
             { name: "HTML5", icon: SiHtml5, color: "text-orange-500" },
-            { name: "CSS3", icon: SiCss3, color: "text-blue-500" },
-            { name: "Swift", icon: SiSwift, color: "text-orange-500" }
+            { name: "CSS3", icon: SiCss3, color: "text-blue-500" }
         ],
         logo: { icon: FaLaptopCode, color: "text-white" },
     },
@@ -39,9 +38,8 @@ export const skills = [
             { name: "Zustand", icon: GiBearFace, color: "text-orange-900" },
             { name: "Node.js", icon: SiNodedotjs, color: "text-lime-300" },
             { name: "Express.js", icon: SiExpress, color: "text-white" },
-            { name: "Next.js", icon: SiNextdotjs, color: "text-black" },
+            { name: "Next.js", icon: SiNextdotjs, color: "text-white" },
             { name: ".NET", icon: SiDotnet, color: "text-white" },
-            { name: "Django", icon: SiDjango, color: "text-orange-400" },
             { name: "Passport.js", icon: SiPassport, color: "text-green-400" },
             { name: "Tailwind CSS", icon: SiTailwindcss, color: "text-blue-300" },
             { name: "Mongoose", icon: SiMongoose, color: "text-orange-800" }
