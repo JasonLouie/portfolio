@@ -1,6 +1,5 @@
 "use client";
 import { useState } from "react";
-import { Turnstile } from "@marsidev/react-turnstile";
 
 const MESSAGE_MIN = 10;
 const MESSAGE_MAX = 1000;
@@ -13,7 +12,6 @@ interface FieldErrors {
     name?: string;
     email?: string;
     message?: string;
-    token?: string;
 }
 
 const fieldClass =
@@ -24,12 +22,9 @@ const errorClass = "mt-1 font-mono text-xs text-red-400";
 export default function ContactForm() {
     const [values, setValues] = useState({ name: "", email: "", message: "" });
     const [honeypot, setHoneypot] = useState("");
-    const [token, setToken] = useState("");
     const [errors, setErrors] = useState<FieldErrors>({});
     const [status, setStatus] = useState<Status>("idle");
     const [errorMsg, setErrorMsg] = useState("");
-
-    const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
 
     const handleChange = (
         e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -47,7 +42,6 @@ export default function ContactForm() {
         if (!msg) next.message = "Message is required.";
         else if (msg.length < MESSAGE_MIN) next.message = `Please write at least ${MESSAGE_MIN} characters.`;
         else if (msg.length > MESSAGE_MAX) next.message = `Please keep it under ${MESSAGE_MAX} characters.`;
-        if (!token) next.token = "Please complete the verification.";
         setErrors(next);
         return Object.keys(next).length === 0;
     };
@@ -63,7 +57,7 @@ export default function ContactForm() {
             const res = await fetch("/api/contact", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
-                body: JSON.stringify({ ...values, honeypot, token }),
+                body: JSON.stringify({ ...values, honeypot }),
             });
             if (!res.ok) {
                 const data = (await res.json().catch(() => ({}))) as { error?: string };
@@ -71,7 +65,6 @@ export default function ContactForm() {
             }
             setStatus("success");
             setValues({ name: "", email: "", message: "" });
-            setToken("");
         } catch (err: unknown) {
             setStatus("error");
             setErrorMsg(err instanceof Error ? err.message : "Something went wrong.");
@@ -153,21 +146,6 @@ export default function ContactForm() {
                 />
                 {errors.message && <p className={errorClass}>{errors.message}</p>}
             </div>
-
-            {siteKey ? (
-                <div>
-                    <Turnstile
-                        siteKey={siteKey}
-                        onSuccess={setToken}
-                        onExpire={() => setToken("")}
-                        onError={() => setToken("")}
-                        options={{ theme: "dark" }}
-                    />
-                    {errors.token && <p className={errorClass}>{errors.token}</p>}
-                </div>
-            ) : (
-                <p className={errorClass}>Verification is not configured (missing Turnstile site key).</p>
-            )}
 
             {status === "error" && (
                 <p role="alert" aria-live="assertive" className="font-mono text-xs text-red-400">
