@@ -87,6 +87,154 @@ body {
     background: var(--color-accent);
 }
 
+/* Resume page — terminal-dark rendering of the resume.lol markdown.
+   Mirrors content/resume/resume.css layout (the PDF uses that light theme). */
+.resume-content {
+    color: var(--color-fg);
+    font-size: 0.9rem;
+    line-height: 1.55;
+}
+
+.resume-content h1 {
+    margin: 0 0 0.25rem;
+    text-align: center;
+    font-family: var(--font-mono);
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    font-weight: 700;
+    color: var(--color-fg);
+}
+
+.resume-content h2 {
+    margin: 1.75rem 0 0.6rem;
+    padding-bottom: 0.25rem;
+    border-bottom: 1px solid color-mix(in srgb, var(--color-fg) 18%, transparent);
+    font-family: var(--font-mono);
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+}
+
+.resume-content h3 {
+    margin: 0.85rem 0 0.2rem;
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-fg);
+}
+
+.resume-content h3 a {
+    font-weight: 700;
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+.resume-content h4 {
+    margin: 0.5rem 0 0.2rem;
+    font-weight: 400;
+    font-style: italic;
+    color: var(--color-muted);
+}
+
+.resume-content p {
+    margin: 0.3rem 0;
+    color: var(--color-muted);
+}
+
+.resume-content a {
+    color: var(--color-accent);
+    text-underline-offset: 3px;
+}
+
+.resume-content a:hover {
+    color: var(--color-accent-hover);
+}
+
+.resume-content strong {
+    font-weight: 600;
+    color: var(--color-fg);
+}
+
+.resume-content ul {
+    margin: 0.25rem 0 0.85rem;
+    padding-left: 1.2rem;
+    list-style: disc;
+    color: var(--color-muted);
+}
+
+.resume-content li {
+    margin-bottom: 0.25rem;
+}
+
+.resume-content .tech-stack,
+.resume-content .normal {
+    font-style: normal;
+    font-weight: 400;
+    color: var(--color-muted);
+}
+
+.resume-content .normal {
+    white-space: nowrap;
+}
+
+/* The PDF (resume.css) uses .spacer to right-align dates; the web pins them
+   absolutely instead, so the spacer isn't needed here. */
+.resume-content .spacer {
+    display: none;
+}
+
+/* Entry dates: flow inline on mobile; pinned top-right on wider screens so they
+   stay on the right even when a long monospace heading wraps to a second line.
+   The padding-right reserves room so the title text wraps under, not over. */
+@media (min-width: 640px) {
+    .resume-content h3,
+    .resume-content h4 {
+        position: relative;
+        padding-right: 11.5rem;
+    }
+
+    .resume-content h3 > .normal,
+    .resume-content h4 > .normal {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+}
+
+/* Mobile: the date can't sit top-right in the narrow column, so put it on its
+   own line and tint it so it reads as a date, not a run-on of the content. */
+@media (max-width: 639px) {
+    .resume-content h3 > .normal,
+    .resume-content h4 > .normal {
+        display: block;
+        margin-top: 0.15rem;
+        font-size: 0.78rem;
+        color: var(--color-accent);
+    }
+}
+
+/* header line: location | citizenship | email | linkedin | github */
+.resume-content .headerInfo ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    list-style: none;
+}
+
+.resume-content .headerInfo li {
+    color: var(--color-muted);
+}
+
+.resume-content .headerInfo li:not(:last-child)::after {
+    content: "|";
+    margin-left: 0.5rem;
+    color: color-mix(in srgb, var(--color-fg) 30%, transparent);
+}
+
 /* Terminal cursor */
 @keyframes blink {
     0%, 49% { opacity: 1; }
@@ -113,6 +261,34 @@ body {
 
 @media (prefers-reduced-motion: reduce) {
     .cursor-blink {
+        animation: none;
+    }
+}
+
+/* Mobile menu: stagger items in when the panel opens */
+@keyframes menu-item-in {
+    from {
+        opacity: 0;
+        transform: translateX(-0.6rem);
+    }
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@media (max-width: 1023px) {
+    .menu-link {
+        animation: menu-item-in 0.32s ease both;
+    }
+    /* active mobile-menu link: green text only (no full-width underline) */
+    .menu-link.nav-active::after {
+        display: none;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .menu-link {
         animation: none;
     }
 }
