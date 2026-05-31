@@ -10,7 +10,7 @@ export default function ProjectCard({ slug, name, description, stack, src, githu
     const detailHref = `/projects/${slug}`;
 
     return (
-        <div className="group flex flex-col overflow-hidden rounded-lg border border-fg/10 bg-surface transition-colors hover:border-accent/40">
+        <div className="group flex h-full flex-col overflow-hidden rounded-lg border border-fg/10 bg-surface transition duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_14px_36px_-16px_rgba(34,197,94,0.35)]">
             <Link href={detailHref} aria-label={`${name} details`} className="block w-full overflow-hidden bg-bg">
                 <div className="relative aspect-video w-full">
                     <Image

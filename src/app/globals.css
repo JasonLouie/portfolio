@@ -214,6 +214,42 @@ body {
     }
 }
 
+/* --- Subtle animations --- */
+
+/* Hero glow: slow breathing pulse */
+@keyframes glow-breathe {
+    0%, 100% { opacity: 0.6; }
+    50% { opacity: 1; }
+}
+
+.hero-glow {
+    animation: glow-breathe 7s ease-in-out infinite;
+}
+
+/* Scroll-reveal: fade + slide up when scrolled into view */
+[data-reveal] {
+    opacity: 0;
+    transform: translateY(1rem);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    will-change: opacity, transform;
+}
+
+[data-reveal][data-visible] {
+    opacity: 1;
+    transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-glow {
+        animation: none;
+    }
+    [data-reveal] {
+        opacity: 1;
+        transform: none;
+        transition: none;
+    }
+}
+
 /* header line: location | citizenship | email | linkedin | github */
 .resume-content .headerInfo ul {
     display: flex;

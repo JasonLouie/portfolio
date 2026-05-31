@@ -19,7 +19,7 @@ interface SkillCardProps {
 
 export default function SkillCard({ name, details, logo }: SkillCardProps) {
     return (
-        <div className="group rounded-lg border border-fg/10 bg-surface p-5 transition-colors hover:border-accent/40">
+        <div className="group rounded-lg border border-fg/10 bg-surface p-5 transition duration-200 hover:-translate-y-1 hover:border-accent/40 hover:shadow-[0_12px_30px_-14px_rgba(34,197,94,0.35)]">
             <div className="mb-4 flex items-center gap-3 border-b border-fg/10 pb-3">
                 <span className="flex h-10 w-10 items-center justify-center rounded-md bg-accent/10 ring-1 ring-accent/30">
                     <logo.icon className="h-5 w-5 text-accent" />
