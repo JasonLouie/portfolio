@@ -11,7 +11,7 @@ export const navLinks = [
     { name: "About", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "Resume", href: "/resume" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/#contact" },
 ];
 
 export const bio = "I am a software engineer with a strong foundation in React, Node.js, and algorithm optimization, currently advancing my expertise through a Master's degree at Georgia Tech.";

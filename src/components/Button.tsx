@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MouseEventHandler } from "react";
+import { CSSProperties, MouseEventHandler } from "react";
 
 interface ButtonProps {
     id?: string;
@@ -11,6 +11,7 @@ interface ButtonProps {
     download?: string;
     disabled?: boolean;
     hoverEffect?: string;
+    style?: CSSProperties;
 }
 
 export default function Button({
@@ -22,13 +23,14 @@ export default function Button({
     buttonType,
     download,
     disabled,
-    hoverEffect
+    hoverEffect,
+    style
 } : ButtonProps) {
     const classes = `${className} ${disabled ? "hover:cursor-not-allowed" : "hover:cursor-pointer"}`;
 
     const renderButton = () => {
         return (
-            <button id={id} className={classes} onClick={onClick} disabled={disabled} type={buttonType ? buttonType : "button"}>
+            <button id={id} className={classes} style={style} onClick={onClick} disabled={disabled} type={buttonType ? buttonType : "button"}>
                 {children}
             </button>
         );
@@ -36,7 +38,7 @@ export default function Button({
 
     const renderLink = () => {
         return (
-            <Link href={href!} className={classes} onClick={onClick}>
+            <Link href={href!} className={classes} style={style} onClick={onClick}>
                 {children}
             </Link>
         )
@@ -44,7 +46,7 @@ export default function Button({
 
     const renderDownload = () => {
         return (
-            <a href={href!} className={classes} >{children}</a>
+            <a href={href!} className={classes} style={style}>{children}</a>
         );
     }
 

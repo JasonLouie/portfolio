@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async redirects() {
+    return [
+      // Contact lives as a section on the home one-pager now.
+      { source: "/contact", destination: "/#contact", permanent: false },
+    ];
+  },
 };
 
 export default nextConfig;
