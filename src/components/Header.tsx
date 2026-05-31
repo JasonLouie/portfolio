@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { IconType } from "react-icons";
@@ -7,6 +7,7 @@ import { SiGithub, SiLinkedin, SiGmail } from "react-icons/si";
 import { navLinks, contacts } from "../constants";
 import avatar from "@/src/assets/avatar.png";
 import Button from "./Button";
+import { MovingBorderButton } from "./MovingBorderButton";
 import { useState } from "react";
 import MobileMenu from "./MobileMenu";
 
@@ -19,6 +20,7 @@ const SOCIAL_ICONS: Record<string, IconType> = {
 export default function Header() {
     const [openNavigation, setOpenNavigation] = useState(false);
     const pathname = usePathname();
+    const router = useRouter();
 
     // Prevent scrolling if navigation is open
     const toggleNavigation = () => {
@@ -81,15 +83,21 @@ export default function Header() {
                             // Style it as an outlined action button (no prompt, no active state).
                             if (link.name === "Contact") {
                                 return (
-                                    <Button
+                                    <div
                                         key={link.name}
-                                        href={link.href}
-                                        onClick={handleClick}
+                                        className="menu-link self-start lg:self-auto"
                                         style={delay}
-                                        className="menu-link w-fit self-start rounded-md border border-accent/50 px-4 py-2 font-mono lowercase tracking-wide text-xl text-accent transition-colors hover:bg-accent/10 lg:self-auto lg:py-1.5 lg:text-nav lg:uppercase"
                                     >
-                                        {link.name}
-                                    </Button>
+                                        <MovingBorderButton
+                                            onClick={() => {
+                                                handleClick();
+                                                router.push(link.href);
+                                            }}
+                                            className="border border-accent/20 font-mono lowercase tracking-wide text-accent shadow-[0_0_14px_rgba(34,197,94,0.10)] lg:uppercase"
+                                        >
+                                            {link.name}
+                                        </MovingBorderButton>
+                                    </div>
                                 );
                             }
 
