@@ -74,6 +74,41 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 </div>
             </div>
 
+            {project.overview && (
+                <section className="mt-10">
+                    <h2 className="mb-3 font-mono text-sm font-semibold uppercase tracking-wide text-accent">Overview</h2>
+                    <p className="leading-relaxed text-muted">{project.overview}</p>
+                </section>
+            )}
+
+            {project.features && project.features.length > 0 && (
+                <section className="mt-8">
+                    <h2 className="mb-3 font-mono text-sm font-semibold uppercase tracking-wide text-accent">Key Features</h2>
+                    <ul className="space-y-2">
+                        {project.features.map((feature, i) => (
+                            <li key={`feature-${i}`} className="flex gap-2 leading-relaxed text-muted">
+                                <span className="text-accent">›</span>
+                                <span>{feature}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+
+            {project.highlights && project.highlights.length > 0 && (
+                <section className="mt-8">
+                    <h2 className="mb-3 font-mono text-sm font-semibold uppercase tracking-wide text-accent">Technical Highlights</h2>
+                    <ul className="space-y-2">
+                        {project.highlights.map((highlight, i) => (
+                            <li key={`highlight-${i}`} className="flex gap-2 leading-relaxed text-muted">
+                                <span className="text-accent">›</span>
+                                <span>{highlight}</span>
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+
             {project.stack.length > 0 && (
                 <div className="mt-8">
                     <h2 className="mb-3 font-mono text-sm font-semibold text-fg">tech stack</h2>
