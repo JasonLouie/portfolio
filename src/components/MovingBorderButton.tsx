@@ -8,18 +8,18 @@ const STROKE_SAMPLES = 28;
 const CYCLE_MS = 3800;
 
 // Phase boundaries (fraction of cycle)
-const P1_END = 0.28;  // travel to TR / BL
-const P2_END = 0.43;  // pause at corners
-const P3_END = 0.73;  // travel to BR
-const P4_END = 0.82;  // fade out at BR
+const P1_END = 0.28; // travel to TR / BL
+const P2_END = 0.43; // pause at corners
+const P3_END = 0.73; // travel to BR
+const P4_END = 0.82; // fade out at BR
 
-const TAIL_RGB: [number, number, number] = [6, 78, 59];      // emerald-900
-const HEAD_RGB: [number, number, number] = [34, 197, 94];    // green-500 (accent)
+const TAIL_RGB: [number, number, number] = [6, 78, 59]; // emerald-900
+const HEAD_RGB: [number, number, number] = [34, 197, 94]; // green-500 (accent)
 const STROKE_WIDTH = 1.5;
 const MIN_ALPHA = 0.08;
 const MAX_ALPHA = 0.5;
 const GLOW_BLUR = 8;
-const GLOW_RGB: [number, number, number] = [74, 222, 128];   // green-400
+const GLOW_RGB: [number, number, number] = [74, 222, 128]; // green-400
 
 function easeInOut(t: number): number {
   return t < 0.5 ? 2 * t * t : -1 + (4 - 2 * t) * t;
@@ -31,7 +31,12 @@ function lerp(a: number, b: number, t: number): number {
 
 // Path A: clockwise from TL apex → TR apex → BR apex
 // All arc math uses rp = r - 1 so the 2px stroke sits on the border edge.
-function pathAPoint(d: number, W: number, H: number, r: number): [number, number] {
+function pathAPoint(
+  d: number,
+  W: number,
+  H: number,
+  r: number
+): [number, number] {
   const rp = r - 1;
   const PI = Math.PI;
   let rem = d;
@@ -68,7 +73,12 @@ function pathAPoint(d: number, W: number, H: number, r: number): [number, number
 }
 
 // Path B: counter-clockwise from TL apex → BL apex → BR apex
-function pathBPoint(d: number, W: number, H: number, r: number): [number, number] {
+function pathBPoint(
+  d: number,
+  W: number,
+  H: number,
+  r: number
+): [number, number] {
   const rp = r - 1;
   const PI = Math.PI;
   let rem = d;
@@ -138,7 +148,9 @@ function drawStroke(
 
     // Canvas shadow gives a soft glow halo around the thin core stroke.
     // shadowColor's alpha controls glow intensity independently of the stroke.
-    ctx.shadowColor = `rgba(${GLOW_RGB[0]},${GLOW_RGB[1]},${GLOW_RGB[2]},${(ca * 1.6).toFixed(3)})`;
+    ctx.shadowColor = `rgba(${GLOW_RGB[0]},${GLOW_RGB[1]},${GLOW_RGB[2]},${(
+      ca * 1.6
+    ).toFixed(3)})`;
     ctx.shadowBlur = GLOW_BLUR;
 
     ctx.beginPath();

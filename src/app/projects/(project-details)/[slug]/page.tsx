@@ -67,6 +67,8 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                         className={
                             isPlaceholder
                                 ? "h-full w-full object-contain p-16 opacity-25"
+                                : project.fit === "contain"
+                                ? "h-full w-full object-contain"
                                 : "h-full w-full object-cover"
                         }
                         priority

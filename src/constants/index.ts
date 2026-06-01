@@ -1,4 +1,5 @@
 import missing from "@/src/assets/missing.png";
+import chatforge from "@/src/assets/chatforge.png";
 import { StaticImageData } from "next/image";
 import { SiFramework, SiClaude, SiAnthropic, SiGooglegemini, SiPython, SiJavascript, SiTypescript, SiDotnet, SiCplusplus, SiMysql, SiHtml5, SiCss3, SiMongoose, SiPassport, SiNextdotjs, SiReact, SiAngular, SiRedux, SiTailwindcss, SiNodedotjs, SiExpress, SiMongodb, SiGit, SiGithub, SiPostman, SiVercel, SiRender, SiNetlify, SiPytest, SiTestinglibrary, SiJunit5, SiJest } from "react-icons/si";
 import { TbBrandCSharp } from "react-icons/tb";
@@ -91,6 +92,7 @@ export interface Project {
     description: string;
     stack: string[];
     src: StaticImageData;
+    fit?: "cover" | "contain"; // image object-fit on card/detail (default "cover")
     github?: string;
     demo?: string;
     // Detail-page (/projects/[slug]) content — optional; rendered only when present.
@@ -253,7 +255,7 @@ export const projects: Project[] = [
         name: "ChatForge",
         description: "A Python desktop chat application for real-time text, voice, and video over TCP/UDP sockets with multithreading — an early solo project built before AI coding tools.",
         stack: ["Python", "Tkinter", "Socket Programming"],
-        src: missing,
+        src: chatforge,
         github: "https://github.com/JasonLouie/ChatForge",
         overview: "A Python desktop chat application delivering real-time text, voice, and video over the network — one of my earliest solo projects, built before AI coding tools.",
         features: [
