@@ -42,6 +42,28 @@ and change @REDACTED to be true
 ## Professional Summary
 Full-Stack Software Engineer who ships production web applications end-to-end with **React**, **Next.js**, **TypeScript**, **Node.js/Express**, and **MongoDB**. Has built **AI-powered features** that integrate the **Anthropic Claude API** with **prompt engineering** and multi-stage **LLM pipelines**, alongside core strengths in **RESTful API** design, **authentication**, **state management**, and **performance optimization**. Seeking full-stack or AI-focused software engineering roles to own features from architecture to deployment.
 
+## Education
+### **Georgia Institute of Technology**&nbsp;|&nbsp;*Master of Science in Computer Science*&nbsp;| Atlanta, GA <span class="spacer"></span><span class="normal">Jan. 2026 - Present</span>
+- Current Coursework: Introduction to Information Security, Software Analysis
+
+### **Per Scholas**&nbsp;|&nbsp;*Certificate in Software Engineering*&nbsp;| Remote <span class="spacer"></span><span class="normal">Aug. 2025 &ndash; Nov. 2025</span>
+- Completed an intensive, hands-on training program in full-stack web development using the MERN stack
+
+### **CUNY Hunter College**&nbsp;|&nbsp;*Bachelor of Arts in Computer Science*&nbsp;| New York, NY <span class="spacer"></span><span class="normal">Aug. 2019 &ndash; Jan. 2023</span>
+- Minor in Mathematics | GPA: 3.7
+
+## Experience
+
+### **Software Engineering Intern**&nbsp;| GTechFin | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
+- Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture through production deployment) with minimal oversight
+- Owned the full development lifecycle across **coding, testing, and debugging**, collaborating with **cross-functional teams** and producing **technical documentation** as needed
+- Leveraged AI tooling (**Claude Code**) to accelerate development and sustain delivery velocity as a solo developer
+
+### **AI Model Quality Analyst**&nbsp;| Data Annotation | Remote <span class="spacer"></span><span class="normal"> Apr. 2024 &ndash; Jul. 2024 </span>
+- Evaluated AI-generated **Python**, **Java**, and **C++** code for correctness, efficiency, and adherence to **best practices**, ensuring functional output through **unit testing**
+- Debugged and validated **multi-language outputs**, ensuring **functional** and **optimized solutions**
+- Provided technical feedback to improve AI code generation accuracy
+
 ## Technical Skills
 <span class="indent"></span>**Languages**: Python, JavaScript (ES6+), TypeScript, C#, C++, Java, SQL, HTML5, CSS3
 
@@ -69,25 +91,3 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 - Built a responsive **React** app with **Zustand** middleware to sync complex game state across **local storage** and a **cloud database**
 - Secured user sessions with a **Node.js/Express** API using **Passport.js** strategies and **JWTs** stored in cookies
 - Achieved near-instant search on a **1,000+ item dataset** with memoized fuzzy search via **Fuse.js**
-
-## Education
-### **Georgia Institute of Technology**&nbsp;|&nbsp;*Master of Science in Computer Science*&nbsp;| Atlanta, GA <span class="spacer"></span><span class="normal">Jan. 2026 - Present</span>
-- Current Coursework: Introduction to Information Security, Software Analysis
-
-### **Per Scholas**&nbsp;|&nbsp;*Certificate in Software Engineering*&nbsp;| Remote <span class="spacer"></span><span class="normal">Aug. 2025 &ndash; Nov. 2025</span>
-- Completed an intensive, hands-on training program in full-stack web development using the MERN stack
-
-### **CUNY Hunter College**&nbsp;|&nbsp;*Bachelor of Arts in Computer Science*&nbsp;| New York, NY <span class="spacer"></span><span class="normal">Aug. 2019 &ndash; Jan. 2023</span>
-- Minor in Mathematics | GPA: 3.7
-
-## Experience
-
-### **Software Engineering Intern**&nbsp;| GTechFin | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
-- Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture through production deployment) with minimal oversight
-- Owned the full development lifecycle across **coding, testing, and debugging**, collaborating with **cross-functional teams** and producing **technical documentation** as needed
-- Leveraged AI tooling (**Claude Code**) to accelerate development and sustain delivery velocity as a solo developer
-
-### **AI Model Quality Analyst**&nbsp;| Data Annotation | Remote <span class="spacer"></span><span class="normal"> Apr. 2024 &ndash; Jul. 2024 </span>
-- Evaluated AI-generated **Python**, **Java**, and **C++** code for correctness, efficiency, and adherence to **best practices**, ensuring functional output through **unit testing**
-- Debugged and validated **multi-language outputs**, ensuring **functional** and **optimized solutions**
-- Provided technical feedback to improve AI code generation accuracy
