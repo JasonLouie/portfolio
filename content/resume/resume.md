@@ -54,6 +54,11 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 
 ## Experience
 
+### **Freelance Web Developer**&nbsp;| [Family Buddies](https://www.familybuddies.net/) | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
+- Designed, built, and **shipped a responsive production website end-to-end** for a New York elderly-care service using **Next.js**, **TypeScript**, and **Tailwind CSS**, achieving a perfect **100 Lighthouse Performance and SEO** score
+- Built a server-side contact pipeline that persists submissions to **Google Sheets** via a service account, hardened against spam with **Cloudflare Turnstile** and a honeypot
+- Delivered accessible, mobile-first layouts with **Framer Motion** animations; deployed and maintained on **Vercel**
+
 ### **Software Engineering Intern**&nbsp;| GTechFin | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
 - Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture through production deployment) with minimal oversight
 - Owned the full development lifecycle across **coding, testing, and debugging**, collaborating with **cross-functional teams** and producing **technical documentation** as needed
@@ -77,11 +82,6 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 
 
 ## Projects
-### [Family Buddies](https://www.familybuddies.net/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Tailwind CSS, Framer Motion, Google Sheets API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; Present</span>
-- Designed and built a responsive company website for a New York elderly-care service using **Next.js**, **TypeScript**, and **Tailwind CSS**, achieving a perfect **100 Lighthouse Performance and SEO** score
-- Built a server-side contact pipeline that persists submissions to **Google Sheets**, hardened against spam with **Cloudflare Turnstile** and a honeypot
-- Polished the experience with **Framer Motion** animations and accessible, mobile-first layouts, deployed on **Vercel**
-
 ### [AI Humanizer App](https://text-humanizer-client.vercel.app/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Express, MongoDB, Anthropic Claude API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; June 2026</span>
 - Built a 3-stage, detector-aware text-rewriting pipeline (diagnose, rewrite, then chained re-humanization of borderline outputs) on **Anthropic Claude**; **100% of outputs scored human-leaning (under 50% AI on ZeroGPT)** across a 66-case benchmark, with roughly **85% under 30% AI**
 - Refined output through iterative **prompt engineering** with **Claude Code**, running measured cycles of targeted prompt changes and **deterministic post-processing**
