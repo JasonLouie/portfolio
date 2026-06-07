@@ -82,7 +82,7 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 - Built a server-side contact pipeline that persists submissions to **Google Sheets**, hardened against spam with **Cloudflare Turnstile** and a honeypot
 - Polished the experience with **Framer Motion** animations and accessible, mobile-first layouts, deployed on **Vercel**
 
-### [AI Humanizer App](https://text-humanizer-client.vercel.app/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Express, MongoDB, Anthropic Claude API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; Present</span>
+### [AI Humanizer App](https://text-humanizer-client.vercel.app/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Express, MongoDB, Anthropic Claude API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; June 2026</span>
 - Built a 3-stage, detector-aware text-rewriting pipeline (diagnose, rewrite, then chained re-humanization of borderline outputs) on **Anthropic Claude**; **100% of outputs scored human-leaning (under 50% AI on ZeroGPT)** across a 66-case benchmark, with roughly **85% under 30% AI**
 - Refined output through iterative **prompt engineering** with **Claude Code**, running measured cycles of targeted prompt changes and **deterministic post-processing**
 - Engineered the **Next.js** and **Express** application with **Clerk authentication**, **Stripe** usage-based billing, and per-user rate limiting on **MongoDB**
