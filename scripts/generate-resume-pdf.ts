@@ -26,6 +26,10 @@ async function main() {
     const pdf = await mdToPdf(
         { content },
         {
+            // Sets the HTML <title>, which Chromium writes into the PDF's /Title
+            // metadata (otherwise it falls back to the localhost serve URL, which
+            // shows up as the document title in Adobe/viewers).
+            document_title: "JasonLouieResume",
             // Drop md-to-pdf's bundled github-markdown.css (it adds line-height/margins
             // on top of resume.css and pushes the resume onto a second page).
             stylesheet: [],
