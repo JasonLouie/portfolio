@@ -54,7 +54,7 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 
 ## Experience
 
-### **Freelance Web Developer**&nbsp;| [Family Buddies](https://www.familybuddies.net/) | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
+### **Freelance Web Developer**&nbsp;| Family Buddies | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
 - Designed, built, and **shipped a responsive production website end-to-end** for a New York elderly-care service using **Next.js**, **TypeScript**, and **Tailwind CSS**, achieving a perfect **100 Lighthouse Performance and SEO** score
 - Built a server-side contact pipeline that persists submissions to **Google Sheets** via a service account, hardened against spam with **Cloudflare Turnstile** and a honeypot
 - Delivered accessible, mobile-first layouts with **Framer Motion** animations; deployed and maintained on **Vercel**
