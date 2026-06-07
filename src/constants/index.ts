@@ -99,6 +99,7 @@ export interface Project {
     stack: string[];
     src: StaticImageData;
     fit?: "cover" | "contain"; // image object-fit on card/detail (default "cover")
+    date?: string; // active window, e.g. "Apr 2026 – Present"
     github?: string;
     demo?: string;
     // Detail-page (/projects/[slug]) content — optional; rendered only when present.
@@ -114,6 +115,7 @@ export const projects: Project[] = [
         description: "A custom website for a New York elderly-care coordination service — case management, home visits, wellness check-ins, and help navigating benefit programs like MLTC and NHTD.",
         stack: ["Next.js", "TypeScript", "Tailwind CSS", "Framer Motion", "Google APIs"],
         src: familybuddies,
+        date: "Apr 2026 – Present",
         demo: "https://www.familybuddies.net/",
         overview: "A freelance website for Family Buddies, a New York elderly-care coordination service. It presents the company's services, benefit-program guidance, and team, and converts visitors through a spam-protected contact pipeline — built solo and shipped to production.",
         features: [
@@ -136,6 +138,7 @@ export const projects: Project[] = [
         description: "An AI-text humanizer built during my internship — a multi-stage, prompt-engineered LLM pipeline that rewrites AI-assisted drafts to read naturally and evade detectors, with authentication and usage-based billing.",
         stack: ["Next.js", "TypeScript", "Express", "MongoDB", "Clerk", "Tailwind CSS"],
         src: humanize,
+        date: "Apr 2026 – Jun 2026",
         demo: "https://text-humanizer-client.vercel.app/",
         overview: "A SaaS AI-text humanizer built during my internship at GTechFin. It rewrites AI-generated drafts to read naturally and evade AI detectors through a multi-stage Anthropic Claude pipeline, wrapped in a full product with accounts, billing, and rate limiting.",
         features: [
@@ -159,6 +162,7 @@ export const projects: Project[] = [
         stack: ["React Native", "Expo", "TypeScript", "Supabase", "Claude API", "RevenueCat"],
         src: amibroke,
         fit: "contain",
+        date: "May 2026 – Present",
         github: "https://github.com/Ahmath708/Amibroke",
         overview: "A cross-platform mobile app (React Native / Expo) that helps a Gen Z audience make sense of their finances. Users describe their situation in plain English and get an AI-generated roast, a deterministic 0–100 health score, and actionable guidance — all backed by a Supabase edge-function architecture with subscription monetization. Originally a teammate's project, I took ownership and drove its redesign.",
         features: [
@@ -207,6 +211,7 @@ export const projects: Project[] = [
         description: "A full-stack MERN game that challenges users to identify Pokémon from visual clues and stats, featuring secure authentication, optimistic UI updates, and a responsive design.",
         stack: ["MongoDB", "Express", "React", "Node.js", "Zustand", "Passport.js", "JWT"],
         src: pokeguesser,
+        date: "Nov 2025 – Dec 2025",
         github: "https://github.com/JasonLouie/PokeGuesser",
         demo: "https://pokeguesser-frontend.onrender.com/",
         overview: "A full-stack MERN game where players identify Pokémon from visual clues and stats. It pairs a responsive React client with a secured Node/Express API and persists progress across local and cloud storage.",
@@ -229,6 +234,7 @@ export const projects: Project[] = [
         description: "A React app for browsing manga, manhwa, manhua, and light novels — search, detail pages, client-side accounts, favorites, and interactive carousels powered by the Jikan API.",
         stack: ["React", "Vite", "JavaScript", "Jikan API"],
         src: mangadb,
+        date: "Nov 2025",
         github: "https://github.com/JasonLouie/MangaDB",
         demo: "https://manga-db-site.netlify.app/",
         overview: "A React single-page app for discovering manga, manhwa, manhua, and light novels, powered by the Jikan API. It offers search, rich detail pages, and a client-side account system.",
@@ -251,6 +257,7 @@ export const projects: Project[] = [
         description: "An interactive web app where users guess anime characters from their photos — character data from the Jikan API, progress persisted via localStorage, built with class-based vanilla JS modules.",
         stack: ["JavaScript", "HTML", "CSS", "Axios", "Jikan API"],
         src: aniguesser,
+        date: "Sep – Oct 2025",
         github: "https://github.com/JasonLouie/AniGuesser",
         demo: "https://ani-guesser.vercel.app/",
         overview: "An interactive browser game where players guess anime characters from their photos, with character data pulled from the Jikan API and progress saved locally.",
@@ -272,6 +279,7 @@ export const projects: Project[] = [
         description: "A web-based recreation of Wordle with an on-screen keyboard, local game-state persistence, and result tracking with elapsed-time stats.",
         stack: ["JavaScript", "HTML", "CSS"],
         src: wordleClone,
+        date: "Sep 2025",
         github: "https://github.com/JasonLouie/Wordle-Clone",
         demo: "https://jlouie-wordle.vercel.app/",
         overview: "A browser recreation of Wordle, built entirely with vanilla JavaScript, HTML, and CSS — no framework or backend.",
@@ -291,6 +299,7 @@ export const projects: Project[] = [
         description: "A Python desktop chat application for real-time text, voice, and video over TCP/UDP sockets with multithreading — an early solo project built before AI coding tools.",
         stack: ["Python", "Tkinter", "Socket Programming"],
         src: chatforge,
+        date: "Jun 2022 – Aug 2022",
         github: "https://github.com/JasonLouie/ChatForge",
         overview: "A Python desktop chat application delivering real-time text, voice, and video over the network — one of my earliest solo projects, built before AI coding tools.",
         features: [

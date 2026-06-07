@@ -30,6 +30,10 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
                 <span className="text-accent">›&nbsp;</span>{project.name}
             </h1>
 
+            {project.date && (
+                <p className="mt-2 font-mono text-sm text-muted">{project.date}</p>
+            )}
+
             {project.description && (
                 <p className="mt-4 leading-relaxed text-muted">{project.description}</p>
             )}

@@ -14,6 +14,7 @@ export default function ProjectCard({
   github,
   demo,
   fit,
+  date,
 }: Project) {
   const isPlaceholder = src === missing;
   const detailHref = `/projects/${slug}`;
@@ -44,11 +45,15 @@ export default function ProjectCard({
       <div className="flex flex-1 flex-col p-4">
         <Link
           href={detailHref}
-          className="mb-2 font-mono text-base font-semibold text-fg transition-colors hover:text-accent"
+          className="mb-1 font-mono text-base font-semibold text-fg transition-colors hover:text-accent"
         >
           <span className="text-accent">›&nbsp;</span>
           {name}
         </Link>
+
+        {date && (
+          <p className="mb-2 font-mono text-xs text-muted">{date}</p>
+        )}
 
         {description && (
           <p className="mb-3 text-sm leading-relaxed text-muted">
