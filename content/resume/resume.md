@@ -40,10 +40,10 @@ and change @REDACTED to be true
 </div>
 
 ## Professional Summary
-Full-Stack Software Engineer who ships production web applications end-to-end with **React**, **Next.js**, **TypeScript**, **Node.js/Express**, and **MongoDB**. Has built **AI-powered features** that integrate the **Anthropic Claude API** with **prompt engineering** and multi-stage **LLM pipelines**, alongside core strengths in **RESTful API** design, **authentication**, **state management**, and **performance optimization**. Seeking full-stack or AI-focused software engineering roles to own features from architecture to deployment.
+Full-Stack Software Engineer who ships production web and mobile applications end-to-end with **React**, **Next.js**, **TypeScript**, **Node.js/Express**, and **MongoDB**. Has built **AI-powered features** that integrate the **Anthropic Claude API** with **prompt engineering** and multi-stage **LLM pipelines**, alongside core strengths in **RESTful API** design, **authentication**, **state management**, and **performance optimization**. Seeking full-stack or AI-focused roles to own features from architecture to deployment.
 
 ## Education
-### **Georgia Institute of Technology**&nbsp;|&nbsp;*Master of Science in Computer Science*&nbsp;| Atlanta, GA <span class="spacer"></span><span class="normal">Jan. 2026 - Present</span>
+### **Georgia Institute of Technology**&nbsp;|&nbsp;*Master of Science in Computer Science*&nbsp;| Atlanta, GA <span class="spacer"></span><span class="normal">Jan. 2026 &ndash; Present</span>
 - Current Coursework: Introduction to Information Security, Software Analysis
 
 ### **Per Scholas**&nbsp;|&nbsp;*Certificate in Software Engineering*&nbsp;| Remote <span class="spacer"></span><span class="normal">Aug. 2025 &ndash; Nov. 2025</span>
@@ -57,34 +57,34 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 ### **Freelance Web Developer**&nbsp;| Family Buddies | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
 - Designed, built, and **shipped a responsive production website end-to-end** for a New York elderly-care service using **Next.js**, **TypeScript**, and **Tailwind CSS**, achieving a perfect **100 Lighthouse Performance and SEO** score
 - Built a server-side contact pipeline that persists submissions to **Google Sheets** via a service account, hardened against spam with **Cloudflare Turnstile** and a honeypot
-- Delivered accessible, mobile-first layouts with **Framer Motion** animations; deployed and maintained on **Vercel**
+- Delivered accessible, mobile-first layouts with **Framer Motion** animations, ensuring smooth interactions and fast load times for users on all devices; deployed and maintained on **Vercel**
 
 ### **Software Engineering Intern**&nbsp;| GTechFin Inc. | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
-- Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture through production deployment) with minimal oversight
-- Owned the full development lifecycle across **coding, testing, and debugging**, collaborating with **cross-functional teams** and producing **technical documentation** as needed
-- Leveraged AI tooling (**Claude Code**) to accelerate development and sustain delivery velocity as a solo developer
+- Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture to production) with **Next.js**, **TypeScript**, **Node.js/Express**, and **MongoDB**, deployed on **Vercel** and **Render**, with minimal oversight
+- Took ownership of and shipped a **cross-platform mobile app** built with **React Native** and **Expo**, backed by **Supabase** (Postgres) with **AI features** powered by the **Anthropic Claude API**
+- Owned the full development lifecycle (**coding, testing with Playwright/Jest, debugging**), using **Claude Code** to scaffold features, tests, and refactors, while collaborating with **cross-functional teams** and writing **technical documentation**
 
 ### **AI Model Quality Analyst**&nbsp;| Data Annotation | Remote <span class="spacer"></span><span class="normal"> Apr. 2024 &ndash; Jul. 2024 </span>
 - Evaluated AI-generated **Python**, **Java**, and **C++** code for correctness, efficiency, and adherence to **best practices**, ensuring functional output through **unit testing**
 - Debugged and validated **multi-language outputs**, ensuring **functional** and **optimized solutions**
-- Provided technical feedback to improve AI code generation accuracy
+- Ranked competing model responses against a **multi-criteria rubric** (correctness, efficiency, readability, security) and documented precise, actionable feedback used to refine the model's code generation
 
 ## Technical Skills
 <span class="indent"></span>**Languages**: Python, JavaScript (ES6+), TypeScript, C#, C++, Java, SQL, HTML5, CSS3
 
-<span class="indent"></span>**Frameworks & Libraries**: React, Redux, Zustand, Node.js, Express.js, Next.js, Passport.js, Mongoose, .NET
+<span class="indent"></span>**Frameworks & Libraries**: React, React Native, Redux, Zustand, Node.js, Express.js, Next.js, Tailwind CSS, Passport.js, Mongoose
 
-<span class="indent"></span>**AI / LLM**: Claude Code, Gemini, Claude API, Prompt Engineering
+<span class="indent"></span>**AI / LLM**: Claude Code, Gemini, Anthropic Claude API, Prompt Engineering
 
-<span class="indent"></span>**Tools & Databases**: Git, GitHub, Postman, VS Code, Vercel, Render, Netlify, MySQL, MongoDB
+<span class="indent"></span>**Tools & Databases**: Git, GitHub, Postman, VS Code, Vercel, Render, Netlify, Supabase, MySQL, PostgreSQL, MongoDB
 
-<span class="indent"></span>**Software Testing**: Unit Testing, Performance Testing, Code Profiling, Pytest, React Testing Lib, JUnit
+<span class="indent"></span>**Software Testing**: Unit Testing, Performance Testing, Code Profiling, Jest, Playwright, Pytest, JUnit
 
 
 ## Projects
-### [AI Humanizer App](https://text-humanizer-client.vercel.app/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Express, MongoDB, Anthropic Claude API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; June 2026</span>
+### [AI Humanizer App](https://text-humanizer-client.vercel.app/) <span class="tech-stack">&nbsp;| *Next.js, TypeScript, Express, MongoDB, Anthropic Claude API*</span><span class="spacer"></span><span class="normal">Apr. 2026 &ndash; Jun. 2026</span>
 - Built a 3-stage, detector-aware text-rewriting pipeline (diagnose, rewrite, then chained re-humanization of borderline outputs) on **Anthropic Claude**; **100% of outputs scored human-leaning (under 50% AI on ZeroGPT)** across a 66-case benchmark, with roughly **85% under 30% AI**
-- Refined output through iterative **prompt engineering** with **Claude Code**, running measured cycles of targeted prompt changes and **deterministic post-processing**
+- Refined output through iterative **prompt engineering** with **Claude Code** and **deterministic post-processing**
 - Engineered the **Next.js** and **Express** application with **Clerk authentication**, **Stripe** usage-based billing, and per-user rate limiting on **MongoDB**
 
 ### [PokéGuesser](https://pokeguesser-frontend.onrender.com/) <span class="tech-stack">&nbsp;| *React, Node.js, Express, MongoDB, Zustand, Passport.js, JWT, Fuse.js*</span><span class="spacer"></span><span class="normal">Nov. 2025 &ndash; Dec. 2025</span>
