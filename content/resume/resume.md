@@ -59,7 +59,7 @@ Full-Stack Software Engineer who ships production web applications end-to-end wi
 - Built a server-side contact pipeline that persists submissions to **Google Sheets** via a service account, hardened against spam with **Cloudflare Turnstile** and a honeypot
 - Delivered accessible, mobile-first layouts with **Framer Motion** animations; deployed and maintained on **Vercel**
 
-### **Software Engineering Intern**&nbsp;| GTechFin | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
+### **Software Engineering Intern**&nbsp;| GTechFin Inc. | Remote <span class="spacer"></span><span class="normal"> Apr. 2026 &ndash; Present </span>
 - Independently designed, built, and **shipped a full-stack web application end-to-end** (architecture through production deployment) with minimal oversight
 - Owned the full development lifecycle across **coding, testing, and debugging**, collaborating with **cross-functional teams** and producing **technical documentation** as needed
 - Leveraged AI tooling (**Claude Code**) to accelerate development and sustain delivery velocity as a solo developer
